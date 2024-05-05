@@ -68,7 +68,7 @@ class NoteController extends Controller
         $note->update($data);
 
         return to_route('note.show', $note)->with('message', 'Note was created updated');
-        
+
     }
 
     /**
@@ -77,6 +77,6 @@ class NoteController extends Controller
     public function destroy(Note $note)
     {
         $note->delete();
-        return to_route('note.index', $note)->with('message','Note was deleted');
+        return to_route('note.index', $note)->with('message', 'Note was deleted');
     }
 }

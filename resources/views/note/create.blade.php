@@ -4,7 +4,7 @@
         <div class="notes">
           
                 <form action="{{route('note.store')}}" method="POST" class="note">
-                    @csrf
+                    @csrf {{-- Protects from submitting the form from external website--}}
                     <textarea name="note" rows="10" class="note-body" placeholder="Enter you note here">
                       </textarea>
                     <div class="note-buttons">
@@ -13,7 +13,6 @@
                     </div>
                 </form>
            
-
         </div>
     </div>
 </x-layout>
