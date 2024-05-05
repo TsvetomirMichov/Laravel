@@ -2,7 +2,6 @@
     <div class="note-container single-note">
        <h1>Create note</h1>
         <div class="notes">
-          
                 <form action="{{route('note.store')}}" method="POST" class="note">
                     @csrf {{-- Protects from submitting the form from external website--}}
                     <textarea name="note" rows="10" class="note-body" placeholder="Enter you note here">
@@ -12,7 +11,6 @@
                         <button class="note-submit-button">Submit</button>
                     </div>
                 </form>
-           
         </div>
     </div>
 </x-layout>
