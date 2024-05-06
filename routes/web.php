@@ -4,9 +4,9 @@ use App\Http\Controllers\NoteController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
-Route::middleware(['auth','verified'])->group(function(){
+Route::redirect('/','/note')->name('dashboard');
 
-// Note Routes
+Route::middleware(['auth','verified'])->group(function(){
 // Route::get('/note', [NoteController::class, 'index'])->name('index');
 // Route::get('/note/create', [NoteController::class, 'create'])->name('note.create');
 // Route::post('/note', [NoteController::class, 'store'])->name('note.store');
